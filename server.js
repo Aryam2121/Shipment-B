@@ -1,6 +1,6 @@
-import express from 'express';
 import { json } from 'body-parser';
 import { config } from 'dotenv';
+import express from 'express';
 import cors from 'cors';
 import connectDB from './config/db.js';
 import shipmentRoutes from "./routes/shipmentRoutes.js";
