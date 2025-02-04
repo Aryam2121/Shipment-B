@@ -1,16 +1,15 @@
-import { json } from 'body-parser';
-import { config } from 'dotenv';
 import express from 'express';
 import cors from 'cors';
+import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import shipmentRoutes from "./routes/shipmentRoutes.js";
 
-config();
+dotenv.config();
 connectDB();
 
 const app = express();
 app.use(cors());
-app.use(json());
+app.use(express.json()); // Use express.json() instead of body-parser
 
 app.use('/api', shipmentRoutes);
 
