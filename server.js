@@ -9,7 +9,7 @@ connectDB();
 
 const app = express();
 app.use(cors());
-app.use(express.json()); // Use express.json() instead of body-parser
+app.use(express.json()); 
 
 app.use('/api', shipmentRoutes);
 
